@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALTPULSE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="altpulse-icon.png">
+</head>
+<body>
+  <header>
+    <h1 id="logo">ALTPULSE</h1>
+    <div id="settingsIcon" onclick="toggleSettings()">??</div>
+  </header>
+
+  <div id="settingsPanel" class="hidden">
+    <select id="languageSelect" onchange="changeLanguage()">
+      <option value="el">Ελληνικά</option>
+      <option value="en">English</option>
+    </select>
+    <select id="themeSelect" onchange="changeTheme()">
+      <option value="dark">Dark Theme</option>
+      <option value="light">Light Theme</option>
+      <option value="classic">Classic Theme</option>
+    </select>
+    <div id="ownerPanel" class="hidden">
+      <h3>Owner Panel</h3>
+      <button onclick="manageAccess()">Έλεγχος Πρόσβασης</button>
+    </div>
+  </div>
+
+  <main>
+    <h2 id="welcomeText">WELCOME TO ALTPULSE</h2>
+
+    <div class="menu-bar">
+      <button onclick="showSection('top')">Top</button>
+      <button onclick="showSection('ai')">Alt AI</button>
+      <button onclick="showSection('portfolio')">Portfolio</button>
+      <button onclick="showSection('alerts')">Alerts</button>
+    </div>
+
+    <section id="top">
+      <h3>Top Altcoins</h3>
+      <p>Εδώ εμφανίζονται τα altcoins με την καλύτερη προβλεπόμενη άνοδο.</p>
+    </section>
+
+    <section id="ai" class="hidden">
+      <h3>Alt AI</h3>
+      <div id="chatbox">
+        <div id="messages"></div>
+        <input type="text" id="userInput" placeholder="Πες κάτι..." onkeydown="if(event.key === 'Enter') sendMessage()">
+        <button onclick="sendMessage()">Αποστολή</button>
+      </div>
+    </section>
+
+    <section id="portfolio" class="hidden">
+      <h3>Το Portfolio σου</h3>
+      <p>Διαχειρίσου τα κρυπτονομίσματα και δες την αξία τους.</p>
+    </section>
+
+    <section id="alerts" class="hidden">
+      <h3>Alerts</h3>
+      <p>Προτεινόμενες κινήσεις από το AI και τον αλγόριθμο για αγορά ή πώληση.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p id="disclaimer">Αποποίηση ευθύνης: Η εφαρμογή δεν φέρει ευθύνη για οικονομικές ζημίες.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

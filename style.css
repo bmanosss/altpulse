@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #3a7bd5;
+  color: white;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+#settings-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.popup {
+  position: absolute;
+  top: 60px;
+  right: 15px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.popup button {
+  display: block;
+  margin: 5px 0;
+  width: 100%;
+  padding: 5px;
+  background-color: #3a7bd5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#main-screen {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+input, button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #3a7bd5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.switch {
+  text-align: center;
+  font-size: 14px;
+  color: #3a7bd5;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#bottom-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #f1f1f1;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+}
+
+#bottom-menu button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #3a7bd5;
+}
+
+#chatbox {
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 200px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 30px;
+  padding-bottom: 60px;
+}
+
+/* Themes */
+body.theme-light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.theme-dark {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.theme-blue {
+  background-color: #e8f0fe;
+  color: #1a237e;
+}
+
+/* VIP Themes */
+body.theme-vip-gold {
+  background-color: #fff8e1;
+  color: #795548;
+}
+
+body.theme-vip-black {
+  background-color: #000000;
+  color: #39ff14;
+}
+
+body.theme-vip-royal {
+  background: linear-gradient(45deg, #002f4b, #dc4225);
+  color: #ffffff;
+}

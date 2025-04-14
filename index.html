@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ALTPULSE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 class="logo">ALTPULSE</h1>
+    <button id="settings-btn">⚙️</button>
+  </header>
+
+  <div id="language-popup" class="popup hidden">
+    <button onclick="setLanguage('el')">Ελληνικά</button>
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="showThemes()">Themes</button>
+    <div id="owner-panel" class="hidden">
+      <h4>OWNER PANEL</h4>
+      <p>Email: manosbournous@hotmail.com</p>
+      <p>Κωδικός: M@nos775599</p>
+      <button onclick="banUser()">Ban χρήστη</button>
+    </div>
+  </div>
+
+  <main id="main-screen">
+    <section id="login-screen">
+      <h2 id="login-title">Σύνδεση</h2>
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Κωδικός">
+      <button onclick="login()">Σύνδεση</button>
+      <p class="switch" onclick="toggleRegister()">Δεν έχετε λογαριασμό; Αποκτήστε έναν</p>
+    </section>
+
+    <section id="verify-screen" class="hidden">
+      <h3>Επαλήθευση Email</h3>
+      <p>Στείλαμε έναν κωδικό στο email σας</p>
+      <input type="text" id="verification-code" placeholder="Κωδικός">
+      <button onclick="verifyCode()">Επαλήθευση</button>
+    </section>
+
+    <section id="welcome-screen" class="hidden">
+      <h1>WELCOME TO ALTPULSE</h1>
+      <p>Είσαι έτοιμος να ανακαλύψεις τις προβλέψεις!</p>
+    </section>
+
+    <section id="home-screen" class="hidden">
+      <h2>Top Altcoins</h2>
+      <ul id="top-coins"></ul>
+      <input type="text" placeholder="Αναζήτηση altcoins" oninput="filterCoins(this.value)">
+      <ul id="all-coins"></ul>
+    </section>
+
+    <section id="ai-screen" class="hidden">
+      <h2>Alt AI</h2>
+      <div id="chatbox"></div>
+      <input type="text" id="ai-input" placeholder="Ρώτα κάτι..." onkeydown="sendAI(event)">
+    </section>
+
+    <section id="portfolio-screen" class="hidden">
+      <h2>Portfolio</h2>
+      <ul id="portfolio-list"></ul>
+    </section>
+
+    <section id="alerts-screen" class="hidden">
+      <h2>Alerts</h2>
+      <ul id="alerts-list"></ul>
+    </section>
+  </main>
+
+  <nav id="bottom-menu">
+    <button onclick="showScreen('home')">Αρχική</button>
+    <button onclick="showScreen('ai')">Alt AI</button>
+    <button onclick="showScreen('portfolio')">Portfolio</button>
+    <button onclick="showScreen('alerts')">Alerts</button>
+  </nav>
+
+  <footer>
+    <p id="copyright">© 2025 ALTPULSE. All rights reserved.</p>
+    <p id="disclaimer">Οι προβλέψεις δεν αποτελούν επενδυτική συμβουλή.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
